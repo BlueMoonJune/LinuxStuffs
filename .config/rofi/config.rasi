@@ -1,0 +1,86 @@
+configuration {
+	modes: [ combi ];
+	combi-mods: [ window, drun, run ];
+}
+
+//@theme "/usr/share/rofi/themes/mindspike.rasi"
+
+* {
+	background: #000000;
+	color: #00ffff;
+	foreground: #ff00ff;
+}
+
+window {
+	height: 100%;
+	width: 30em;
+	location: west;
+	anchor: west;
+	background-color: #000000;
+	border: 0px;
+}
+
+element {
+	orientation: horizontal;
+	children: [ element-icon, element-split ];
+	spacing: 0px;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	border: 1px 1px 1px 1px;
+	border-color: #00ffff;
+	background-color: #000000;
+}
+
+element-split {
+	orientation: vertical;
+	children: [ element-spacer, element-text ];
+	border-color: inherit;
+}
+
+element-text {
+	text-color: #00ffff;
+	padding: 0em 0em 0em 0.5em;
+}
+
+element-text selected {
+	text-color: #ffff00;
+}
+
+element-spacer {
+	border: 0px 0px 1px 0px;
+	border-color: inherit;
+	children: [ element-filler ];
+}
+
+element-filler {
+	background-color: #00ffff;
+	margin: 0.2em 15% 0.2em 0.5em;
+}
+
+element-filler selected {
+	border: 0px 0px 1px 0px;
+	background-color: #ffff00;
+	border-color: inherit;
+}
+
+element-icon {	
+	border: 1px 1px 1px 1px;
+	border-color: inherit;
+	size: 3.5em;
+}
+
+element selected.normal {
+	border-color: #ffff00;
+	background-color: #000000;
+}
+
+element normal.normal {
+	background-color: #000000;
+}
+
+element alternate.normal {
+	background-color: #000000;
+}
+
+listview {
+	spacing: 0em 1em 0em 1em;
+}
